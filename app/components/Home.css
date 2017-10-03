@@ -1,14 +1,14 @@
-.container {
-  position: absolute;
-  top: 30%;
-  left: 10px;
-  text-align: center;
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
 }
-
-.container h2 {
-  font-size: 5rem;
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
-
-.container a {
-  font-size: 1.4rem;
+.form-signin button[type="submit"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

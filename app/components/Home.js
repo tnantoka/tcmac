@@ -6,11 +6,13 @@ import styles from './Home.css';
 export default class Home extends Component {
   render() {
     return (
-      <div>
-        <div className={styles.container} data-tid="container">
-          <h2>Home</h2>
+      <div className={styles['form-signin']}>
+        <form className="form-signin">
+          <h2 className="form-signin-heading text-center">tcmac</h2>
+          <input type="text" id="inputEmail" className="form-control form-control-lg" placeholder="Token" required autoFocus />
+          <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
           <Link to="/counter">to Counter</Link>
-        </div>
+        </form>
       </div>
     );
   }
