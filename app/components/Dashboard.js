@@ -47,7 +47,7 @@ class Dashboard extends Component {
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>ニックネーム</th>
+                    <th>チーム名</th>
                   </tr>
                 </thead>
                 <tbody>

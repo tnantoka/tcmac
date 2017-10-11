@@ -5,7 +5,7 @@ export type userStateType = {
   +id?: number,
   +nickname?: string,
   teams?: Array<{
-    id: numer,
+    id: number,
     name: string
   }>
 };
