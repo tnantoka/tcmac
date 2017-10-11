@@ -13,8 +13,8 @@ export function setUser(user: userStateType) {
 
 export function fetchUser(token: string) {
   return (dispatch: (action: userActionType) => void) => {
-    API.request(token, 'user', 'GET').then(({ id, nickname }) => {
-      dispatch(setUser({ id, nickname }));
+    API.request(token, 'user/info', 'GET').then(({ id, nickname, teams }) => {
+      dispatch(setUser({ id, nickname, teams }));
     });
   };
 }

@@ -1,5 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
 import Dashboard from '../components/Dashboard';
 
 function mapStateToProps({ user }) {
@@ -10,6 +11,7 @@ function mapStateToProps({ user }) {
 
 function mapDispatchToProps(dispatch) {
   return {
+    moveToRoot: () => dispatch(push('/')),
   };
 }
 

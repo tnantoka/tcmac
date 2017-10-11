@@ -3,7 +3,11 @@ import { SET_USER } from '../actions/user';
 
 export type userStateType = {
   +id?: number,
-  +nickname?: string
+  +nickname?: string,
+  teams?: Array<{
+    id: numer,
+    name: string
+  }>
 };
 
 type userActionType = {

@@ -9,8 +9,17 @@ class Dashboard extends Component {
     user: userStateType,
   };
 
+  componentDidMount() {
+    if (!this.props.user.id) {
+      this.props.moveToRoot();
+    }
+  }
+
   render() {
     const { user } = this.props;
+    if (!user.id) {
+      return <div />
+    }
     return (
       <div>
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark justify-content-between">
@@ -35,18 +44,21 @@ class Dashboard extends Component {
 
             <main className="col-sm-9 ml-sm-auto col-md-10 pt-3">
               <table className="table table-bordered table-striped">
-                <tbody>
+                <thead>
                   <tr>
                     <th>ID</th>
-                    <td>{user.id}</td>
-                  </tr>
-                  <tr>
                     <th>ニックネーム</th>
-                    <td>{user.nickname}</td>
                   </tr>
+                </thead>
+                <tbody>
+                  {user.teams.map(team =>
+                    <tr key={team.id}>
+                      <td>{team.id}</td>
+                      <td>{team.name}</td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
-
             </main>
           </div>
         </div>
