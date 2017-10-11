@@ -16,7 +16,6 @@ const request = (token: ?string, path: string, method: string, body: ?string) =>
     method: method,
     headers: buildHeaders(token),
     body: body ? JSON.stringify(body) : null,
-    credentials: 'same-origin',
   })
   .then(response => response.json())
 );
